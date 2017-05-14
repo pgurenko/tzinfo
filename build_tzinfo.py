@@ -4,6 +4,7 @@ import sys
 import json
 
 os.system('wget ftp://ftp.iana.org/tz/tzdata-latest.tar.gz')
+os.system('mkdir ./tzdata')
 os.system('tar -C ./tzdata -xvf tzdata-latest.tar.gz')
 os.system('for file in ./tzdata/*; do zic -d ./tzdata/out $file; done')
 
